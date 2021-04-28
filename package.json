@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.1.2",
+    "@tailwindcss/forms": "^0.3.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -12,21 +14,97 @@
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test --env=jsdom",
+    "eject": "react-scripts eject",
+    "format": "prettier --write **/*.{js,jsx,ts,tsx} --config ./.prettierrc"
+  },
+  "derealize": {
+    "branch": "derealize",
+    "runScript": "dev",
+    "formatScript": "format",
+    "lunchUrl": "http://localhost:3000",
+    "port": 3000,
+    "pages": [
+      "/",
+      "/Welcome",
+      "/Play",
+      "/Sizing",
+      "/Color",
+      "/Typography",
+      "/Shadows",
+      "/build-anything/Simple",
+      "/build-anything/Playful",
+      "/build-anything/Elegant",
+      "/build-anything/Brutalist",
+      "/Performance",
+      "/Responsive",
+      "/States",
+      "/component/Recipes",
+      "/ApplyDirective",
+      "/Dark",
+      "/Grid",
+      "/Transforms",
+      "/Gradients",
+      "/marketing/Hero",
+      "/marketing/Feature",
+      "/marketing/CTA",
+      "/marketing/Headers",
+      "/marketing/Banners",
+      "/application-ui/Layouts",
+      "/application-ui/Headings",
+      "/application-ui/DescriptionLists",
+      "/application-ui/Tables",
+      "/application-ui/Navbars",
+      "/application-ui/Pagination",
+      "/application-ui/Modals",
+      "/application-ui/SlideOvers",
+      "/application-ui/Avatars",
+      "/application-ui/Dropdowns",
+      "/application-ui/form/FormLayout",
+      "/application-ui/form/InputGroups",
+      "/application-ui/form/SelectMenus",
+      "/application-ui/form/SignIn"
+    ],
+    "assets": "public/assets",
+    "applyCssFile": "styles/globals.css"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "eslint:recommended",
+      "prettier",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "babel"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "semi": true,
+          "trailingComma": "all",
+          "tabWidth": 2,
+          "jsxBracketSameLine": true,
+          "printWidth": 100
+        }
+      ],
+      "import/no-anonymous-default-export": [
+        "off"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -39,5 +117,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@derealize/babel-plugin-transform-react": "^1.0.7",
+    "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "^9",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "postcss": "^7",
+    "prettier": "^2.2.1"
   }
 }
