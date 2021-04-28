@@ -29,7 +29,7 @@
   },
   "derealize": {
     "branch": "derealize",
-    "runScript": "dev",
+    "runScript": "start",
     "formatScript": "format",
     "lunchUrl": "http://localhost:3000",
     "port": 3000,
@@ -75,7 +75,7 @@
       "/application-ui/form/SignIn"
     ],
     "assets": "public/assets",
-    "applyCssFile": "styles/globals.css"
+    "applyCssFile": "src/index.css"
   },
   "eslintConfig": {
     "extends": [
