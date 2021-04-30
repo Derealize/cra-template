@@ -15,7 +15,7 @@ export default () => {
           <div className="w-40 h-3 bg-gradient-to-br from-fuchsia-500 to-purple-600"></div>
         </li>
         <li>
-          <div className="w-28 h-3 bg-gradient-to-br from-fuchsia-500 to-purple-600"></div>
+          <div className="w-20 h-3 bg-gradient-to-br from-fuchsia-500 to-purple-600 "></div>
         </li>
         <li>
           <div className="w-24 h-3 bg-gradient-to-br from-fuchsia-500 to-purple-600"></div>
