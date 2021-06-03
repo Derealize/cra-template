@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom';
 import Home from './Home';
 import Welcome from './Welcome';
 import Play from './Play';
@@ -40,7 +40,18 @@ import ApplicationuiFormInputGroups from './application-ui/form/InputGroups';
 import ApplicationuiFormSelectMenus from './application-ui/form/SelectMenus';
 import ApplicationuiFormSignIn from './application-ui/form/SignIn';
 
+function usePageViews() {
+  let location = useLocation();
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.derealize) return;
+    window.derealize.listenElement();
+  }, [location]);
+}
+
 function App() {
+  usePageViews();
+
   return (
     <BrowserRouter>
       <Switch>
