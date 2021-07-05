@@ -1,4 +1,6 @@
+import usePageViews from '../usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="ground">
       <div className="flex p-1">

@@ -1,4 +1,6 @@
+import usePageViews from '../usePageViews';
 export default () => {
+  usePageViews();
   return (
     <>
       <div className="flex -space-x-1 overflow-hidden">

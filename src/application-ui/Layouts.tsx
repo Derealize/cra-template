@@ -1,4 +1,6 @@
+import usePageViews from '../usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div>
       <nav className="bg-gray-800">

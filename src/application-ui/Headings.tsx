@@ -1,4 +1,6 @@
+import usePageViews from '../usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="flex-1 min-w-0">

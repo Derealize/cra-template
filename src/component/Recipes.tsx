@@ -3,6 +3,8 @@ import NavItem from './NavItem';
 import List from './List';
 import ListItem from './ListItem';
 
+import usePageViews from '../usePageViews';
+
 const recipes = [
   {
     title: 'Hank’s Juiciest Beef Burger',
@@ -34,6 +36,8 @@ const recipes = [
 ];
 
 export default function Recipes() {
+  usePageViews();
+
   return (
     <div className="ground">
       <div className="divide-y divide-gray-100">

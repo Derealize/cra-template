@@ -1,4 +1,6 @@
+import usePageViews from './usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
       <div className="max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto">

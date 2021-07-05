@@ -1,4 +1,6 @@
+import usePageViews from './usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="ground">
       <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">

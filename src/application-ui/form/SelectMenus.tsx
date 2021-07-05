@@ -1,5 +1,7 @@
 // https://tailwindui.com/components/application-ui/forms/select-menus
+import usePageViews from '../../usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="bg-gray-100 p-16">
       <label id="listbox-label" className="block text-sm font-medium text-gray-700">

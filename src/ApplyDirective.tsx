@@ -1,4 +1,6 @@
+import usePageViews from './usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="ground">
       <article className="text-gray-600 leading-6">

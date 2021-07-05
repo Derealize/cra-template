@@ -1,4 +1,6 @@
+import usePageViews from './usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="ground">
       <ul className="grid grid-cols-2 gap-4">

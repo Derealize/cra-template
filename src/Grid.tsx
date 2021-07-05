@@ -1,4 +1,6 @@
+import usePageViews from './usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="ground">
       <div className="grid grid-flow-col grid-rows-2 grid-cols-3 gap-4 bg-gray-300 p-4 rounded-xl">

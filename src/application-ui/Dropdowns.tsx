@@ -1,4 +1,6 @@
+import usePageViews from '../usePageViews';
 export default () => {
+  usePageViews();
   return (
     <div className="bg-gray-100 p-16 flex justify-center">
       <div className="relative inline-block text-left">
