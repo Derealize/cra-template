@@ -73,9 +73,14 @@
       "/application-ui/form/SelectMenus",
       "/application-ui/form/SignIn"
     ],
+<<<<<<< HEAD
     "assetsPath": "./public/assets",
     "assetsUrl": "/assets",
     "applyCssFile": "./src/index.css"
+=======
+    "assets": "public/assets",
+    "applyCssFile": "src/index.css"
+>>>>>>> derealize
   },
   "eslintConfig": {
     "extends": [
